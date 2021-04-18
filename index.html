@@ -45,12 +45,17 @@
      $('.result').click(function(){
          $('#display').val(eval($('#display').val()));
      });
-     VanillaTilt.init(document.querySelector(".container"), {
+	     var iwidth=window.innerWidth;
+     if(iwidth>600){
+        VanillaTilt.init(document.querySelector(".container"), {
 		max: 25,
 		speed: 400,
         "max-glare": 1,
         glare:true
 	});
+    }else{
+        console.log(" ");
+    }
     </script>
 </body>
 </html>
